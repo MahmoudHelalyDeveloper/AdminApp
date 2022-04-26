@@ -60,6 +60,7 @@ System.err.println("AuthenticationManagerBuilder !!");
 		String x = "123";
 		PasswordEncoder z = new BCryptPasswordEncoder();
 		String hashedPassword = z.encode(x);
+		System.err.println(z.toString());
 		System.err.println(hashedPassword);
 		auth.userDetailsService(jwtUserDetailsService).passwordEncoder(bCryptPasswordEncoder());
 

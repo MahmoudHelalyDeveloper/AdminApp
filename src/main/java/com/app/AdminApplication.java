@@ -9,6 +9,8 @@ import org.springframework.security.config.annotation.method.configuration.Enabl
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+import com.app.model.SessonUser;
+
 @SpringBootApplication
 
 
@@ -22,4 +24,9 @@ public class AdminApplication {
 	public    PasswordEncoder bCryptPasswordEncoder(){
 	        return new BCryptPasswordEncoder();
 	    }
+	 @Bean SessonUser sessonUser() {
+		 
+		 
+		 return new SessonUser();
+	 }
 }
